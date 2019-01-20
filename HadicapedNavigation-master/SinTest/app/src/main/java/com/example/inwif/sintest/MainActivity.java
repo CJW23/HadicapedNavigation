@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity
     String[] REQUIRED_PERMISSIONS  = {Manifest.permission.CAMERA,
             Manifest.permission.WRITE_EXTERNAL_STORAGE};
     private static final int CAMERA_FACING = Camera.CameraInfo.CAMERA_FACING_BACK; // Camera.CameraInfo.CAMERA_FACING_FRONT
-
+    private Runnable frameCapture;
+    private Thread startCapture;
     private SurfaceView surfaceView;
     private CameraPreview mCameraPreview;
     private View mLayout;  // Snackbar 사용하기 위해서는 View가 필요합니다.
@@ -125,6 +126,10 @@ public class MainActivity extends AppCompatActivity
         // Create the Preview view and set it as the content of this Activity.
         mCameraPreview = new CameraPreview(this, this, CAMERA_FACING, surfaceView);
 
+        frameCapture = new FrameCapture(mCameraPreview);
+        startCapture = new Thread(frameCapture);
+
+        startCapture.start();
     }
 
 

@@ -311,8 +311,6 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback {
 
         }
     };
-
-
     //참고 : http://stackoverflow.com/q/37135675
     Camera.PictureCallback jpegCallback = new Camera.PictureCallback() {
         public void onPictureTaken(byte[] data, Camera camera) {
