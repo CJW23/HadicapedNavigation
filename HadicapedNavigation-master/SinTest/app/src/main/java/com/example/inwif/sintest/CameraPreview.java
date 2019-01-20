@@ -19,6 +19,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Surface;
 import android.view.SurfaceHolder;
@@ -26,6 +27,12 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 // 카메라에서 가져온 영상을 보여주는 카메라 프리뷰 클래스
@@ -42,13 +49,13 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback {
     private List<Size> mSupportedPreviewSizes;
     private Size mPreviewSize;
     private boolean isPreview = false;
-
+    private String encode_image;
     private AppCompatActivity mActivity;
-
+    private Context maincontext;
 
     public CameraPreview(Context context, AppCompatActivity activity, int cameraID, SurfaceView surfaceView) {
         super(context);
-
+        maincontext = context;
 
         Log.d("@@@", "Preview");
 
@@ -335,7 +342,35 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback {
             //bitmap을 byte array로 변환
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-            byte[] currentData = stream.toByteArray();
+            byte[] currentData = stream.toByteArray();      //이미지 데이터
+
+            String fileName = String.format("%d.jpg", System.currentTimeMillis());
+
+
+            //서버로 이미지 전송
+            encode_image = Base64.encodeToString(currentData, 0);
+
+            Response.Listener<String> responseListener = new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        Log.d("cccsdsdsd","cccsdsdsd");
+                        JSONObject jsonResponse = new JSONObject(response);
+                        String success = jsonResponse.getString("success");
+                        if(success.equals("ss") )
+                            Log.d("ccc","ccc");
+                        else
+                            Log.d("ssss","ssss");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            SendImage_request sendImage_request = new SendImage_request(encode_image, fileName, responseListener);
+            RequestQueue queue = Volley.newRequestQueue(maincontext);
+            Log.d(queue.getCache().toString(),"qqqq");
+            queue.add(sendImage_request);
+
 
             //파일로 저장
             new SaveImageTask().execute(currentData);
@@ -370,16 +405,12 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback {
                 Log.d(TAG, "onPictureTaken - wrote bytes: " + data.length + " to "
                         + outputFile.getAbsolutePath());
 
-
                 mCamera.startPreview();
-
 
                 // 갤러리에 반영
                 Intent mediaScanIntent = new Intent( Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
                 mediaScanIntent.setData(Uri.fromFile(outputFile));
                 getContext().sendBroadcast(mediaScanIntent);
-
-
 
                 try {
                     mCamera.setPreviewDisplay(mHolder);
