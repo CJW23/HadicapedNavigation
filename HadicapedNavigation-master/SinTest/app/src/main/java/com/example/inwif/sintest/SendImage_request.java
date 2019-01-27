@@ -13,7 +13,8 @@ public class SendImage_request extends StringRequest {
     private Map<String, String> parameters;
 
     public SendImage_request(String image, String name, Response.Listener<String> listener) {
-        super(Method.POST, URL, listener, null);
+        super(Method.POST, URL
+                , listener, null);
         parameters = new HashMap<>();
         parameters.put("image", image);
         Log.d("sdsds","wwd");

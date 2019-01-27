@@ -1,0 +1,4 @@
+#Thu Jan 17 18:46:49 KST 2019
+base.0=C\:\\Users\\inwif\\Desktop\\aand\\SinTest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

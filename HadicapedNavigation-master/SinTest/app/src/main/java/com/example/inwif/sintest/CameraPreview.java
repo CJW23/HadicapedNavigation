@@ -333,11 +333,11 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback {
             options.inPreferredConfig = Bitmap.Config.ARGB_8888;
             Bitmap bitmap = BitmapFactory.decodeByteArray( data, 0, data.length, options);
 
-
             //이미지를 디바이스 방향으로 회전
             Matrix matrix = new Matrix();
             matrix.postRotate(orientation);
-            bitmap =  Bitmap.createBitmap(bitmap, 0, 0, w, h, matrix, true);
+            bitmap = Bitmap.createBitmap(bitmap, 0, 0, w, h, matrix, true);
+            bitmap = Bitmap.createScaledBitmap(bitmap, 300, 400, true);
 
             //bitmap을 byte array로 변환
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -354,7 +354,6 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback {
                 @Override
                 public void onResponse(String response) {
                     try {
-                        Log.d("cccsdsdsd","cccsdsdsd");
                         JSONObject jsonResponse = new JSONObject(response);
                         String success = jsonResponse.getString("success");
                         if(success.equals("ss") )
@@ -373,7 +372,7 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback {
 
 
             //파일로 저장
-            new SaveImageTask().execute(currentData);
+            // new SaveImageTask().execute(currentData);
 
         }
     };
@@ -408,9 +407,9 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback {
                 mCamera.startPreview();
 
                 // 갤러리에 반영
-                Intent mediaScanIntent = new Intent( Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-                mediaScanIntent.setData(Uri.fromFile(outputFile));
-                getContext().sendBroadcast(mediaScanIntent);
+                // Intent mediaScanIntent = new Intent( Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+                // mediaScanIntent.setData(Uri.fromFile(outputFile));
+                // getContext().sendBroadcast(mediaScanIntent);
 
                 try {
                     mCamera.setPreviewDisplay(mHolder);
