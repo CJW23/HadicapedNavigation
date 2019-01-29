@@ -12,7 +12,7 @@ public class StartActivity extends AppCompatActivity {
 
     private Button startButton;
     private Button trainingButton;
-
+    private VoiceGuide vg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +21,15 @@ public class StartActivity extends AppCompatActivity {
         startButton = findViewById(R.id.startButton);
         trainingButton = findViewById(R.id.trainingButton);
 
+        vg = new VoiceGuide(this);
+
+        trainingButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                vg.sample();
+            }
+        });
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

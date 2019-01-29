@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity
     private Thread startCapture;
     private SurfaceView surfaceView;
     private CameraPreview mCameraPreview;
+    private VoiceGuide vg;
     private View mLayout;  // Snackbar 사용하기 위해서는 View가 필요합니다.
     // (참고로 Toast에서는 Context가 필요했습니다.)
 
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+       // vg = new VoiceGuide(this);
+        //vg.sample();
         // 상태바를 안보이도록 합니다.
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);

@@ -370,6 +370,20 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback {
             Log.d(queue.getCache().toString(),"qqqq");
             queue.add(sendImage_request);
 
+            mCamera.startPreview();
+
+            // 갤러리에 반영
+            // Intent mediaScanIntent = new Intent( Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+            // mediaScanIntent.setData(Uri.fromFile(outputFile));
+            // getContext().sendBroadcast(mediaScanIntent);
+
+            try {
+                mCamera.setPreviewDisplay(mHolder);
+                mCamera.startPreview();
+                Log.d(TAG, "Camera preview started.");
+            } catch (Exception e) {
+                Log.d(TAG, "Error starting camera preview: " + e.getMessage());
+            }
 
             //파일로 저장
             // new SaveImageTask().execute(currentData);
@@ -429,5 +443,8 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback {
             return null;
         }
 
+    }
+    public Context getMaincontext(){
+        return maincontext;
     }
 }
