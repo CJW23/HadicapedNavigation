@@ -14,10 +14,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/rounded"
-        android:layout_marginTop="5dp"
-        android:textSize="17dp"
-        android:textStyle="bold"
         android:text="종료" />
 
 </FrameLayout>

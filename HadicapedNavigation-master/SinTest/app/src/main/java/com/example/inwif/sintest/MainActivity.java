@@ -29,9 +29,11 @@ public class MainActivity extends AppCompatActivity
     private static final int CAMERA_FACING = Camera.CameraInfo.CAMERA_FACING_BACK; // Camera.CameraInfo.CAMERA_FACING_FRONT
     private Runnable frameCapture;
     private Thread startCapture;
+    private Thread startCommunication;
     private SurfaceView surfaceView;
     private CameraPreview mCameraPreview;
     private VoiceGuide vg;
+    private PredictCommunication pc;
     private View mLayout;  // Snackbar 사용하기 위해서는 View가 필요합니다.
     // (참고로 Toast에서는 Context가 필요했습니다.)
 
@@ -40,8 +42,8 @@ public class MainActivity extends AppCompatActivity
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-       // vg = new VoiceGuide(this);
-        //vg.sample();
+        setPrdtCmn(); //소켓 통신 설정
+
         // 상태바를 안보이도록 합니다.
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -61,9 +63,9 @@ public class MainActivity extends AppCompatActivity
 
         Button button = findViewById(R.id.button_main_capture);
         button.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
+                pc.EndCommunication();
                 finish();
             }
         });
@@ -183,11 +185,12 @@ public class MainActivity extends AppCompatActivity
                     }).show();
                 }
             }
-
         }
-
-
     }
-
+    public void setPrdtCmn(){   //예측값 소켓 통신 쓰레드
+        pc = new PredictCommunication(this);
+        startCommunication = new Thread(pc);
+        startCommunication.start();
+    }
 
 }
