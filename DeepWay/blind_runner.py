@@ -2,7 +2,7 @@
 
 from face_detection import detect
 #from arduino import Arduino
-from voice import Voice
+#from voice import Voice
 import time
 import cv2
 import numpy as np
@@ -29,7 +29,7 @@ def drawArrow(frame):
     
     
     
-#out=cv2.VideoWriter('c.avi',cv2.VideoWriter_fourcc(*'MJPG'),20.0,(640,480))
+out=cv2.VideoWriter('c.avi',cv2.VideoWriter_fourcc(*'MJPG'),20.0,(640,480))
 model_name='blind_with_regularization.model'
 COM='COM3'
 camera=0
