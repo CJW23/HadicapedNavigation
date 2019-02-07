@@ -17,7 +17,6 @@ public class FrameCapture implements Runnable {
             try {
                 Thread.sleep(5000);
                 Cp.takePicture();
-                vg.sample();
                 i++;
             } catch (InterruptedException e) {
                 e.printStackTrace();

@@ -15,7 +15,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.hardware.Camera;
 import android.hardware.Camera.Size;
-import android.media.AudioManager;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
@@ -34,8 +33,6 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import static android.content.Context.AUDIO_SERVICE;
 
 
 // 카메라에서 가져온 영상을 보여주는 카메라 프리뷰 클래스
@@ -305,7 +302,7 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback {
 
 
     public void takePicture(){
-        // shutterCallback -> null : make shutterSound null
+
         mCamera.takePicture(null, rawCallback, jpegCallback);
     }
 
@@ -321,9 +318,6 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback {
 
         }
     };
-
-
-
     //참고 : http://stackoverflow.com/q/37135675
     Camera.PictureCallback jpegCallback = new Camera.PictureCallback() {
         public void onPictureTaken(byte[] data, Camera camera) {
@@ -376,14 +370,12 @@ class CameraPreview extends ViewGroup implements SurfaceHolder.Callback {
             Log.d(queue.getCache().toString(),"qqqq");
             queue.add(sendImage_request);
 
-            //2019.02.02
-            //mCamera.startPreview();
+            mCamera.startPreview();
 
             // 갤러리에 반영
             // Intent mediaScanIntent = new Intent( Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
             // mediaScanIntent.setData(Uri.fromFile(outputFile));
             // getContext().sendBroadcast(mediaScanIntent);
-
 
             try {
                 mCamera.setPreviewDisplay(mHolder);

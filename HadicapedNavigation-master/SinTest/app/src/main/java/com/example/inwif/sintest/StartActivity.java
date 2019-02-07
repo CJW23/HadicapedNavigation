@@ -24,10 +24,9 @@ public class StartActivity extends AppCompatActivity {
         vg = new VoiceGuide(this);
 
         trainingButton.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v) {
-                vg.sample();
+                finish();
             }
         });
         startButton.setOnClickListener(new View.OnClickListener() {
