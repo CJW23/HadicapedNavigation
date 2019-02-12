@@ -1,6 +1,7 @@
 package com.codetravel.mediarecorder;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.support.design.widget.Snackbar;
 import android.Manifest;
@@ -54,6 +55,11 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
     SurfaceView mSurface = null;
     SurfaceHolder mSurfaceHolder = null;
+    private Runnable startCamrecoding;
+    private Thread startCamThread;
+
+    private PredictCommunication pc;
+    private Thread startCommunication;
 
     Camera mCamera = null;
 
@@ -70,28 +76,41 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         mBtCamcording.setOnClickListener(new View.OnClickListener(){        //동영상 촬영 버튼
             @Override
             public void onClick(View v) {
-                hasVideo = true;
-                initVideoRecorder();
-                startVideoRecorder();
+                timerRecoding();
             }
         });
 
         mSurface = (SurfaceView)findViewById(R.id.sv);
 
 
+
+    }
+
+    void settingAndRunRecording(){
+        hasVideo = true;
+        initVideoRecorder();
+        startVideoRecorder();
+    }
+
+    void timerRecoding(){
+        startCamrecoding = new TimerRecoding(this);
+        startCamThread = new Thread(startCamrecoding);
+
+        startCamThread.start();
     }
 
     void startVideoRecorder() {     //녹화 실행 함수
-        if(isRecording) {           //녹화를 끝내면 실행 -> 파일 전송
+        if(isRecording) {           //녹화를 끝내면 실행 -> 파일 전송 (isRecording = true);
             mRecorder.stop();
             mRecorder.release();
             mRecorder = null;
 
             mCamera.lock();
             isRecording = false;
+            mBtCamcording.setText("Start Camcording");
             uploadVideo();      //동영상 전송
         }
-        else {
+        else { //(isRecording = false)
             runOnUiThread(new Runnable() {      //동영상 촬영 하면 실행
                 @Override
                 public void run() {
@@ -108,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                     mRecorder.setProfile(profile);
 
 
-                    mPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/record.mp4";
+                    mPath = Environment.getExternalStorageDirectory().getAbsolutePath() + String.format("/%d_record.mp4", System.currentTimeMillis());
                     Log.d(TAG, "file path is " + mPath);
                     mRecorder.setOutputFile(mPath);
 
@@ -137,7 +156,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
-
+                File delFile = new File(mPath);
+                delFile.delete();
             }
 
             @Override
@@ -294,5 +314,11 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
             snackbar.show();
         }
 
+    }
+
+    public void setPrdtCmn(){   //예측값 소켓 통신 쓰레드
+        pc = new PredictCommunication(this);
+        startCommunication = new Thread(pc);
+        startCommunication.start();
     }
 }

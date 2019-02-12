@@ -17,7 +17,7 @@ import java.net.URL;
  */
 public class Upload {
 
-    public static final String UPLOAD_URL= "http://192.168.0.2/sendVideo.php";
+    public static final String UPLOAD_URL= "http://172.30.2.128/sendVideo.php";
 
     private int serverResponseCode;
 

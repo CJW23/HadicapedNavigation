@@ -1,10 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2fcc8acd-82ba-4e71-a270-7ad4afe739df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/HadicapedNavigation-master/SinTest/.idea/gradle.xml" afterPath="$PROJECT_DIR$/HadicapedNavigation-master/SinTest/.idea/gradle.xml" />
-      <change beforePath="$PROJECT_DIR$/HadicapedNavigation-master/SinTest/.idea/misc.xml" afterPath="$PROJECT_DIR$/HadicapedNavigation-master/SinTest/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/HadicapedNavigation-master/SinTest/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HadicapedNavigation-master/SinTest/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HadicapedNavigation-master/SinTest/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HadicapedNavigation-master/SinTest/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HadicapedNavigation-master/SinTest/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.gradle/4.10.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.gradle/4.10.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_appcompat_v7_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_appcompat_v7_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_design_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_design_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_recyclerview_v7_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_recyclerview_v7_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_annotations_25_3_1_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_annotations_25_3_1_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_compat_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_compat_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_core_ui_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_core_ui_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_core_utils_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_core_utils_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_fragment_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_fragment_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_media_compat_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_media_compat_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_v4_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_v4_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_vector_drawable_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_support_vector_drawable_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_transition_25_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/libraries/Gradle__com_android_support_transition_25_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/MediaRecorder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/MediaRecorder.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/app/src/main/java/com/codetravel/mediarecorder/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/app/src/main/java/com/codetravel/mediarecorder/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/app/src/main/java/com/codetravel/mediarecorder/Upload.java" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/app/src/main/java/com/codetravel/mediarecorder/Upload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MediaRecorder/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MediaRecorder/local.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,9 +88,8 @@
       <file leaf-file-name="model_architecture.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DeepWay/model_architecture.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="456">
+              <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -60,9 +97,8 @@
       <file leaf-file-name="blind_runner.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DeepWay/blind_runner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="2014">
+              <caret line="106" column="23" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -70,9 +106,8 @@
       <file leaf-file-name="predict_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DeepWay/predict_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="114">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -80,9 +115,8 @@
       <file leaf-file-name="stop.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DeepWay/stop.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="190">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -90,19 +124,15 @@
       <file leaf-file-name="face_detection.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DeepWay/face_detection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DeepWay/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-              <folding />
+            <state>
+              <caret column="4" selection-start-column="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -118,11 +148,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -140,28 +165,14 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="225" />
     <option name="y" value="55" />
-    <option name="width" value="1233" />
-    <option name="height" value="777" />
+    <option name="width" value="1234" />
+    <option name="height" value="778" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="AndroidView" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,6 +189,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -230,9 +244,6 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -247,31 +258,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992928" visible="true" weight="0.24917382" />
+      <window_info id="Structure" order="1" sideWeight="0.5007072" side_tool="true" visible="true" weight="0.24917382" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,152 +290,164 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/DeepWay/model_architecture.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepWay/blind_runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1696">
-          <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="456">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeepWay/predict_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepWay/face_detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepWay/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="114">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeepWay/stop.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepWay/model_architecture.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepWay/blind_runner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1696">
-          <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepWay/predict_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepWay/face_detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepWay/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepWay/stop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepWay/model_architecture.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepWay/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepWay/face_detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepWay/predict_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeepWay/stop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state relative-caret-position="190">
           <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/face_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeepWay/blind_runner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="106" column="23" lean-forward="false" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="2014">
+          <caret line="106" column="23" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/model_architecture.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/blind_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1696">
+          <caret line="106" column="23" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/predict_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/face_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/stop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/model_architecture.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/blind_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1696">
+          <caret line="106" column="23" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/predict_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/face_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/stop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/model_architecture.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/face_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/predict_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/stop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeepWay/blind_runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2014">
+          <caret line="106" column="23" selection-start-line="106" selection-start-column="20" selection-end-line="106" selection-end-column="23" />
         </state>
       </provider>
     </entry>
