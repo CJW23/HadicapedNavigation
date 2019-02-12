@@ -21,6 +21,7 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.media.CamcorderProfile;
 
@@ -68,20 +69,31 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setPrdtCmn(); //소켓 통신 설정
+
+        // 상태바를 안보이도록 합니다.
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        // 화면 켜진 상태를 유지합니다.
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
+                WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         mPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/record.mp4";        //동영상 경로
         accessPermission();     //Permission 때려박은 함수
         mRecorder = new MediaRecorder();
 
         mBtCamcording = (Button)findViewById(R.id.bt_camcording);
-        mBtCamcording.setOnClickListener(new View.OnClickListener(){        //동영상 촬영 버튼
+        mBtCamcording.setOnClickListener(new View.OnClickListener(){        //동영상 종료 버튼
             @Override
             public void onClick(View v) {
-                timerRecoding();
+                finish();
             }
         });
 
         mSurface = (SurfaceView)findViewById(R.id.sv);
 
+        timerRecoding();
 
 
     }
@@ -107,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
             mCamera.lock();
             isRecording = false;
-            mBtCamcording.setText("Start Camcording");
+            //mBtCamcording.setText("Start Camcording");
             uploadVideo();      //동영상 전송
         }
         else { //(isRecording = false)
@@ -140,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                     mRecorder.start();
                     isRecording = true;
 
-                    mBtCamcording.setText("Stop Camcording");
+                    //mBtCamcording.setText("Stop Camcording");
                 }
             });
         }
