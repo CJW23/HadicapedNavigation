@@ -1,5 +1,3 @@
-
-
 from face_detection import detect
 #from arduino import Arduino
 #from voice import Voice
@@ -29,7 +27,7 @@ def drawArrow(frame):
     
     
     
-out=cv2.VideoWriter('c.avi',cv2.VideoWriter_fourcc(*'MJPG'),20.0,(640,480))
+out=cv2.VideoWriter('c.avi',cv2.VideoWriter_fourcc(*'MJPG'),20.0,(1280, 720))
 model_name='blind_with_regularization.model'
 COM='COM3'
 camera=0
@@ -38,14 +36,6 @@ width=64
 height=64
 prob=0
 label=''
-
-
-
-
-
-
-
-
 
 print("loading model .....")
 model=load_model(model_name)
@@ -66,7 +56,6 @@ while ret:
     faces=fac.faceDetect(frame)
 
     ##stop on left
-    
       ##  you have a stop on '''
     current=datetime.datetime.now()
     new=current.second
@@ -118,13 +107,8 @@ while ret:
     cv2.putText(frame,label+" with probability "+str(prob),(10,25),cv2.FONT_HERSHEY_SIMPLEX,0.7,(255,0,0),2)
     if(label=='center' or label=='right'):
         frame=drawArrow(frame)
-    
-        
     cv2.imshow('frame',frame)
-    
     #out.write(frame)
-    
-
     if(cv2.waitKey(1)&0XFF==ord('q')):
         break
 cap.release()
