@@ -112,6 +112,11 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-
-# Tensorflow - model 
+# Data
+data/
+model/
+numpy_data/
+graph/
+*.avi
+*.mp4
 *.model
