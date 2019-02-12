@@ -1,2 +1,6 @@
 *.model
 *.avi
+blind_project/
+data/
+model/
+numpy_data/

@@ -111,3 +111,12 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Data
+data/
+model/
+numpy_data/
+graph/
+*.avi
+*.mp4
+*.model
