@@ -17,7 +17,7 @@ import java.net.URL;
  */
 public class Upload {
 
-    public static final String UPLOAD_URL= "http://172.30.2.128/sendVideo.php";
+    public static final String UPLOAD_URL= "http://172.30.1.9/sendVideo.php";
 
     private int serverResponseCode;
 
@@ -58,7 +58,8 @@ public class Upload {
             dos.writeBytes(lineEnd);
 
             bytesAvailable = fileInputStream.available();
-            Log.i("Huzza", "Initial .available : " + bytesAvailable);
+            Log.d("oooh", dos.toString());
+            Log.d("Huzza", "Initial .available : " + bytesAvailable);
 
             bufferSize = Math.min(bytesAvailable, maxBufferSize);
             buffer = new byte[bufferSize];
@@ -66,6 +67,7 @@ public class Upload {
             bytesRead = fileInputStream.read(buffer, 0, bufferSize);
 
             while (bytesRead > 0) {
+                Log.d("ggg : ", dos.toString());
                 dos.write(buffer, 0, bufferSize);
                 bytesAvailable = fileInputStream.available();
                 bufferSize = Math.min(bytesAvailable, maxBufferSize);

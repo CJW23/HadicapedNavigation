@@ -64,6 +64,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
     Camera mCamera = null;
 
+    VideoRequest vrq=new VideoRequest();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
         mSurface = (SurfaceView)findViewById(R.id.sv);
 
+
         timerRecoding();
 
 
@@ -120,6 +123,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
             mCamera.lock();
             isRecording = false;
             //mBtCamcording.setText("Start Camcording");
+
             uploadVideo();      //동영상 전송
         }
         else { //(isRecording = false)
@@ -176,6 +180,11 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
             protected String doInBackground(Void... params) {
                 Upload u = new Upload();
                 String msg = u.uploadVideo(mPath);  ///////////////////////경로 보내는 곳
+
+                //파이썬소켓통신 2019.02.13
+                vrq.sendVideo(mPath);
+                vrq.run();
+
                 return msg;
             }
         }
