@@ -3,7 +3,7 @@ import sys
 import time
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_socket.bind(('192.168.0.2', 90)) #ip주소와 포트 번호
+server_socket.bind(('192.168.0.228', 91)) #ip주소와 포트 번호
 server_socket.listen(0)
 
 client_socket, addr = server_socket.accept()  # 소켓 허용
@@ -19,5 +19,3 @@ while True:
         break
     print(data)
 client_socket.close()
-
-

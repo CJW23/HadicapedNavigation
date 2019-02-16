@@ -35,7 +35,7 @@ public class PredictCommunication implements Runnable {
         // 클라이언트
         try {
             // Log.d("communicationSuccess","  ");
-            socket = new Socket("172.30.4.145", 90);
+            socket = new Socket("192.168.0.228", 91);
             while (true) {
                 Log.d("communicationSuccess122","  ");
                 os = socket.getOutputStream();

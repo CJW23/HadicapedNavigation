@@ -1,12 +1,15 @@
 package com.codetravel.mediarecorder;
 
+
 import android.util.Log;
+
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -17,11 +20,11 @@ import java.net.URL;
  */
 public class Upload {
 
-    public static final String UPLOAD_URL= "http://172.30.1.9/sendVideo.php";
 
+    public static final String UPLOAD_URL= "http://private-nnet.cbnu.ac.kr/sendVideo.php";
     private int serverResponseCode;
 
-    public String uploadVideo(String file) {
+    public String uploadVideo(String file) throws IOException {
 
         String fileName = file;
         HttpURLConnection conn = null;
@@ -101,7 +104,7 @@ public class Upload {
             } catch (IOException ioex) {
             }
             return sb.toString();
-        }else {
+        } else {
             return "Could not upload";
         }
     }
