@@ -1,6 +1,7 @@
 package com.codetravel.mediarecorder;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.support.design.widget.Snackbar;
 import android.Manifest;
@@ -20,6 +21,7 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.media.CamcorderProfile;
 
@@ -32,6 +34,10 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.*;
+import java.text.*;
+
+
 
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback, ActivityCompat.OnRequestPermissionsResultCallback {
     private final static String TAG = "MainActivity";
@@ -54,44 +60,84 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
     SurfaceView mSurface = null;
     SurfaceHolder mSurfaceHolder = null;
+    private Runnable startCamrecoding;
+    private Thread startCamThread;
+
+    private PredictCommunication pc;
+    private Thread startCommunication;
 
     Camera mCamera = null;
+
+    SimpleDateFormat formatter = new SimpleDateFormat ( "yyyy-MM-dd-HH-mm-ss", Locale.KOREA );
+    Date currentTime = new Date ( );
+    String dTime = formatter.format ( currentTime );
+
+
+    //VideoRequest vrq=new VideoRequest();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setPrdtCmn(); //소켓 통신 설정
+
+        // 상태바를 안보이도록 합니다.
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        // 화면 켜진 상태를 유지합니다.
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
+                WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         mPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/record.mp4";        //동영상 경로
         accessPermission();     //Permission 때려박은 함수
         mRecorder = new MediaRecorder();
 
         mBtCamcording = (Button)findViewById(R.id.bt_camcording);
-        mBtCamcording.setOnClickListener(new View.OnClickListener(){        //동영상 촬영 버튼
+        mBtCamcording.setOnClickListener(new View.OnClickListener(){        //동영상 종료 버튼
             @Override
             public void onClick(View v) {
-                hasVideo = true;
-                initVideoRecorder();
-                startVideoRecorder();
+                finish();
             }
         });
 
         mSurface = (SurfaceView)findViewById(R.id.sv);
 
 
+        timerRecoding();
+
+
+    }
+
+    void settingAndRunRecording(){
+        hasVideo = true;
+        initVideoRecorder();
+        startVideoRecorder();
+    }
+
+    void timerRecoding(){
+        startCamrecoding = new TimerRecoding(this);
+        startCamThread = new Thread(startCamrecoding);
+
+        startCamThread.start();
     }
 
     void startVideoRecorder() {     //녹화 실행 함수
-        if(isRecording) {           //녹화를 끝내면 실행 -> 파일 전송
+        if(isRecording) {           //녹화를 끝내면 실행 -> 파일 전송 (isRecording = true);
             mRecorder.stop();
             mRecorder.release();
             mRecorder = null;
 
             mCamera.lock();
             isRecording = false;
+
+            //mBtCamcording.setText("Start Camcording");
+
+
             uploadVideo();      //동영상 전송
         }
-        else {
+        else { //(isRecording = false)
             runOnUiThread(new Runnable() {      //동영상 촬영 하면 실행
                 @Override
                 public void run() {
@@ -108,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                     mRecorder.setProfile(profile);
 
 
-                    mPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/record.mp4";
+                    mPath = Environment.getExternalStorageDirectory().getAbsolutePath() + String.format("/%s_record.mp4", dTime);
                     Log.d(TAG, "file path is " + mPath);
                     mRecorder.setOutputFile(mPath);
 
@@ -121,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                     mRecorder.start();
                     isRecording = true;
 
-                    mBtCamcording.setText("Stop Camcording");
+                    //mBtCamcording.setText("Stop Camcording");
                 }
             });
         }
@@ -137,13 +183,24 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
-
+                File delFile = new File(mPath);
+                delFile.delete();
             }
 
             @Override
             protected String doInBackground(Void... params) {
                 Upload u = new Upload();
-                String msg = u.uploadVideo(mPath);  ///////////////////////경로 보내는 곳
+                String msg = null;  ///////////////////////경로 보내는 곳
+                try {
+                    msg = u.uploadVideo(mPath);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                //파이썬소켓통신 2019.02.13
+               // vrq.sendVideo(mPath);
+                //vrq.run();
+
                 return msg;
             }
         }
@@ -190,7 +247,13 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-        mCamera.stopPreview();
+        //mCamera.stopPreview();
+        if(mCamera != null){
+            Camera.Parameters parameters = mCamera.getParameters();
+            parameters.setPreviewSize(width, height);
+            mCamera.setParameters(parameters);
+            mCamera.startPreview();
+        }
     }
 
     @Override
@@ -294,5 +357,11 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
             snackbar.show();
         }
 
+    }
+
+    public void setPrdtCmn(){   //예측값 소켓 통신 쓰레드
+        pc = new PredictCommunication(this);
+        startCommunication = new Thread(pc);
+        startCommunication.start();
     }
 }

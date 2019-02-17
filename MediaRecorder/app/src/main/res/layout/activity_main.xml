@@ -1,33 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.codetravel.mediarecorder.MainActivity">
 
-    <Button
-        android:id="@+id/bt_record"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Start Recording"/>
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/bt_camcording"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Start Camcording"/>
+        <SurfaceView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/buttonZone"/>
 
-    <Button
-        android:id="@+id/bt_play"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Start Playing"/>
+        <LinearLayout
+            android:id="@+id/buttonZone"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bt_camcording"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:textColor="#000000"
+                android:layout_gravity="bottom"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Finish"/>
+        </LinearLayout>
+
+    </RelativeLayout>
 
 
-    <SurfaceView
-        android:id="@+id/sv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-</LinearLayout>
+</FrameLayout>
