@@ -69,8 +69,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     Camera mCamera = null;
 
     SimpleDateFormat formatter = new SimpleDateFormat ( "yyyy-MM-dd-HH-mm-ss", Locale.KOREA );
-    Date currentTime = new Date ( );
-    String dTime = formatter.format ( currentTime );
+
 
 
     //VideoRequest vrq=new VideoRequest();
@@ -89,6 +88,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         // 화면 켜진 상태를 유지합니다.
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON,
                 WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+
 
         mPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/record.mp4";        //동영상 경로
         accessPermission();     //Permission 때려박은 함수
@@ -154,6 +155,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                     mRecorder.setProfile(profile);
 
 
+                    Date currentTime = new Date ();
+                    String dTime = formatter.format ( currentTime );
                     mPath = Environment.getExternalStorageDirectory().getAbsolutePath() + String.format("/%s_record.mp4", dTime);
                     Log.d(TAG, "file path is " + mPath);
                     mRecorder.setOutputFile(mPath);

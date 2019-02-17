@@ -19,7 +19,7 @@ public class TimerRecoding implements Runnable {
                 if(ma.isRecording)
                     continue;
                 ma.settingAndRunRecording();
-                Thread.sleep(2000);
+                Thread.sleep(4000);
                 ma.settingAndRunRecording();
             } catch (InterruptedException e) {
                 e.printStackTrace();
