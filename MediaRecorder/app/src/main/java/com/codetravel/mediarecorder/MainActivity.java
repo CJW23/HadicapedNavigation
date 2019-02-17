@@ -34,6 +34,10 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.*;
+import java.text.*;
+
+
 
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback, ActivityCompat.OnRequestPermissionsResultCallback {
     private final static String TAG = "MainActivity";
@@ -63,6 +67,11 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     private Thread startCommunication;
 
     Camera mCamera = null;
+
+    SimpleDateFormat formatter = new SimpleDateFormat ( "yyyy-MM-dd-HH-mm-ss", Locale.KOREA );
+    Date currentTime = new Date ( );
+    String dTime = formatter.format ( currentTime );
+
 
     //VideoRequest vrq=new VideoRequest();
 
@@ -145,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                     mRecorder.setProfile(profile);
 
 
-                    mPath = Environment.getExternalStorageDirectory().getAbsolutePath() + String.format("/%d_record.mp4", System.currentTimeMillis());
+                    mPath = Environment.getExternalStorageDirectory().getAbsolutePath() + String.format("/%s_record.mp4", dTime);
                     Log.d(TAG, "file path is " + mPath);
                     mRecorder.setOutputFile(mPath);
 
