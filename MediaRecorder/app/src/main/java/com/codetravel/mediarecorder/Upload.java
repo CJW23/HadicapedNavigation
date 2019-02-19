@@ -34,7 +34,7 @@ public class Upload {
         String boundary = "*****";
         int bytesRead, bytesAvailable, bufferSize;
         byte[] buffer;
-        int maxBufferSize = 1 * 1024 * 1024;
+        int maxBufferSize = 1 * 2048 * 2048;
 
         File sourceFile = new File(file);
         if (!sourceFile.isFile()) {

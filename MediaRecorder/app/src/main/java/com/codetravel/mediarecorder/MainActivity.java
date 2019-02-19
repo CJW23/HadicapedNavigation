@@ -117,6 +117,11 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         startVideoRecorder();
     }
 
+    void endRecording(){
+        hasVideo = true;
+        startVideoRecorder();
+    }
+
     void timerRecoding(){
         startCamrecoding = new TimerRecoding(this);
         startCamThread = new Thread(startCamrecoding);
@@ -148,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                     mRecorder.setVideoSource(MediaRecorder.VideoSource.CAMERA);
                     mRecorder.setAudioSource(MediaRecorder.AudioSource.CAMCORDER);
                     //mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
-                    profile = CamcorderProfile.get(CamcorderProfile.QUALITY_720P);
+                    profile = CamcorderProfile.get(CamcorderProfile.QUALITY_480P);
                    // mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
                    // mRecorder.setVideoEncoder(MediaRecorder.VideoEncoder.MPEG_4_SP);
                     mRecorder.setOrientationHint(90);
@@ -187,7 +192,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 File delFile = new File(mPath);
-                delFile.delete();
+                //delFile.delete();
             }
 
             @Override

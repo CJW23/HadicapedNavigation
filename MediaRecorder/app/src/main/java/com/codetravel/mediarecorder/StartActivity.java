@@ -27,7 +27,10 @@ public class StartActivity extends AppCompatActivity {
         trainingButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                finish();
+                Intent intent = new Intent(StartActivity.this, TestRtsp.class);
+                intent.setFlags(FLAG_ACTIVITY_REORDER_TO_FRONT);
+                StartActivity.this.startActivity(intent);
+                //finish();
             }
         });
         startButton.setOnClickListener(new View.OnClickListener() {

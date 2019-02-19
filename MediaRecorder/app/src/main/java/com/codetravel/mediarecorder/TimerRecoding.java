@@ -14,13 +14,12 @@ public class TimerRecoding implements Runnable {
         int i = 0;
         while(i<10){
             try {
-                Thread.sleep(5000);
                 Log.d("gogo","yaya");
                 if(ma.isRecording)
                     continue;
                 ma.settingAndRunRecording();
-                Thread.sleep(4000);
-                ma.settingAndRunRecording();
+                Thread.sleep(5000);
+                ma.endRecording();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

@@ -114,21 +114,27 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7-25.3.1" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-fragment-25.3.1" level="project" />
-    <orderEntry type="library" name="Gradle: com.android.support:support-annotations:25.3.1@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.jakewharton:butterknife-8.8.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.pedroSG94.rtmp-rtsp-stream-client-java:rtsp-1.2.8" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.pedroSG94.rtmp-rtsp-stream-client-java:rtplibrary-1.2.8" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-v4-25.3.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-core-ui-25.3.1" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-media-compat-25.3.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-core:1.3@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.jakewharton:butterknife-annotations:8.8.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: eu.the4thfloor.volley:com.android.volley:2015.05.28@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:animated-vector-drawable-25.3.1" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-compat-25.3.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.pedroSG94.rtmp-rtsp-stream-client-java:encoder-1.2.8" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:recyclerview-v7-25.3.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.pedroSG94.rtmp-rtsp-stream-client-java:rtmp-1.2.8" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:design-25.3.1" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-vector-drawable-25.3.1" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support.constraint:constraint-layout-1.1.3" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:transition-25.3.1" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support.constraint:constraint-layout-solver:1.1.3@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-core-utils-25.3.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-annotations:27.0.2@jar" level="project" />
   </component>
 </module>
