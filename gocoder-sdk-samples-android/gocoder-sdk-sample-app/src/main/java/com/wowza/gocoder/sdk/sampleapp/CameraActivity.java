@@ -45,6 +45,7 @@ public class CameraActivity extends CameraActivityBase   {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
+
         setPrdtCmn();
         Log.d("awd","awd");
         mRequiredPermissions = new String[] {

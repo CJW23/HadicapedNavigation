@@ -25,4 +25,16 @@ public class VoiceGuide {
             tts.speak("앞에 장애물이 있습니다.", TextToSpeech.QUEUE_FLUSH, null);
         }
     }
+    public void sample1(String status){
+
+        if(status == "left") {
+            tts.speak("아가리닥쳐.", TextToSpeech.QUEUE_FLUSH, null);
+        }else if(status == "right") {
+            tts.speak("안물어봤어.", TextToSpeech.QUEUE_FLUSH, null);
+        }else if(status == "center") {
+            tts.speak("안궁금해.", TextToSpeech.QUEUE_FLUSH, null);
+        }else{
+            tts.speak("치킨치킨치킨.", TextToSpeech.QUEUE_FLUSH, null);
+        }
+    }
 }
